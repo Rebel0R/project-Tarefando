@@ -1,24 +1,44 @@
-# gerenciador-tempo
 
-## Project setup
-```
-npm install
+# **Projeto Tarefando 📌**
+
+Esse projeto foi desenvolvido durante o curso Vue: explorando o Framework, da [Alura]('https://www.alura.com.br/'), utilizando: sendo focado no framework Vue.js. 
+
+O objetivo desse projeto foi criar um gerenciador de tarefas prático, cronometrando o tempo das atividades que o usuário desejar digitar.
+
+## Desenvolvedor 👨‍🎤
+
+ [Ricardo Rebelo Junior](https://www.github.com/Rebel0R) - Graduando em Ciência da Computação pela UTFPR-PG, com conhecimentos em Design Gráfico e Desenvolvimento Web.
+
+Você me encontra [aqui](https://www.linkedin.com/in/rrebelojr/), ou através do e-mail: ricardorebelojr@gmail.com
+
+
+
+## Utilizando o código 💻
+
+Esse projeto utiliza o framework web [Bulma](https://bulma.io/documentation/) juntamente com o Vue.js e o [FontAwesome](https://fontawesome.com/).
+
+- **Bulma**
+Adicione esse link dentro do arquivo index.html:
+```bash
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
 ```
 
-### Compiles and hot-reloads for development
+-**FontAwesome**
+
+Adicione esse import dentro do arquivo main.ts:
+```bash
+import "@fortawesome/fontawesome-free/css/all.css";
 ```
+
+-**Execução do Projeto**
+
+Após a criação do projeto, execute este comando no terminal:
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
+Neste projeto, ao exportá-lo para o GitHub, o build não foi realizado. Para realizar o build, execute:
+
+```bash
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
