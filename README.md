@@ -4,6 +4,7 @@
 Esse projeto foi desenvolvido durante o curso Vue: explorando o Framework, da [Alura]('https://www.alura.com.br/'), utilizando: sendo focado no framework Vue.js. 
 
 O objetivo desse projeto foi criar um gerenciador de tarefas prático, cronometrando o tempo das atividades que o usuário desejar digitar.
+Acesse o Tarefando: [Project-Tarefando](https://project-tarefando.vercel.app/)
 
 ## Desenvolvedor 👨‍🎤
 
