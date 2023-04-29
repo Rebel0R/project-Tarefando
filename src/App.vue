@@ -6,6 +6,9 @@
     <div class="column is-three-quarter content">
       <Forms placeholder="Qual tarefa você vai começar agora? 😏" @savingTask="saveTask" />
       <div class="list">
+        <div v-if="taskSaveLocalStorage">
+          <Task v-for="(task, index) in tasksSaved" :key="index" :completedTask="task" />
+        </div>
         <Task v-for="(task, index) in tasks" :key="index" :completedTask="task" />
         <div v-if="tasksEmpty">
           <NoTask />
@@ -26,14 +29,25 @@ import NoTask from "./components/NoTask.vue";
 export default defineComponent({
   name: "App",
   data() {
+    const tasksSaved: { description: string; duration: number }[] = JSON.parse(
+      localStorage.getItem("tasks") ?? "[]"
+    );
     return {
+      tasksSaved: tasksSaved,
       tasks: [] as TaskInterface[],
       setModeActive: false,
     };
   },
   computed: {
     tasksEmpty(): boolean {
-      return this.tasks.length === 0;
+      if (this.tasksSaved.length !== 0) {
+        return false;
+      } else {
+        return this.tasks.length === 0;
+      }
+    },
+    taskSaveLocalStorage(): boolean {
+      return this.tasksSaved.length !== 0;
     },
   },
   components: { SideBar, Forms, Task, NoTask },

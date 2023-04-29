@@ -38,6 +38,15 @@ export default defineComponent({
         duration: timeTotal,
         description: this.descriptionTask,
       });
+      const task: { description: string; duration: number } = {
+        description: this.descriptionTask,
+        duration: timeTotal,
+      };
+      const tasks: { description: string; duration: number }[] = JSON.parse(
+        localStorage.getItem("tasks") ?? "[]"
+      );
+      tasks.push(task);
+      localStorage.setItem("tasks", JSON.stringify(tasks));
       this.descriptionTask = "";
     },
   },

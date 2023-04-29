@@ -10,7 +10,7 @@
       >{{ textButton }}
     </button>
     <button type="button" class="button btn-reload" @click="reloadPage">
-      <i class="fa-solid fa-rotate"></i>Recarregar
+      <i class="fa-solid fa-rotate"></i>Resetar
     </button>
   </header>
 </template>
@@ -43,6 +43,7 @@ export default defineComponent({
         "Deseja recarregar a página? Todas as suas tarefas serão perdidas"
       );
       if (check) {
+        localStorage.clear();
         location.reload();
       }
     },
